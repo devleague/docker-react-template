@@ -3,11 +3,19 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "body-parser": "^1.18.3",
+    "bookshelf": "^0.14.2",
+    "dotenv": "^6.2.0",
+    "express": "^4.16.4",
+    "knex": "^0.16.3",
+    "nodemon": "^1.18.9",
+    "pg": "^7.7.1",
     "react": "^16.7.0",
     "react-dom": "^16.7.0",
     "react-scripts": "2.1.2"
   },
   "scripts": {
+    "dev": "./node_modules/nodemon/bin/nodemon.js ./server/server.js",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
@@ -15,6 +23,10 @@
   },
   "eslintConfig": {
     "extends": "react-app"
+  },
+  "proxy": "http://localhost:8080",
+  "nodemonConfig": {
+    "watch": ["server"]
   },
   "browserslist": [
     ">0.2%",
