@@ -1,14 +1,14 @@
-version: '3'
+version: "3"
 services:
   express-server:
     image: ${DOCKERHUB_NAME}/${IMAGE_NAME}:${IMAGE_VERSION}
     depends_on:
       - postgres-primary-db
-    command: ["npm", "run", "dev"]
     container_name: ${IMAGE_NAME}
-    volumes:
-      - ".:/src/app"
     env_file: .env
+    environment:
+      ENVIRONMENT: production
+      NODE_ENV: production
     ports:
       - "${EXPRESS_HOST_PORT}:${EXPRESS_CONTAINER_PORT}"
     networks:
