@@ -15,7 +15,6 @@
     "react-scripts": "2.1.2"
   },
   "scripts": {
-    "dev": "./node_modules/nodemon/bin/nodemon.js ./server/server.js",
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
