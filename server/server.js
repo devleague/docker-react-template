@@ -4,7 +4,7 @@ const userRoutes = require('./routes/users');
 const decorator = require('./database/decorator');
 
 // data vars
-const PORT = process.env.PORT;
+const PORT = process.env.EXPRESS_HOST_PORT;
 const SESSION_SECRET = process.env.SESSION_SECRET;
 const REDIS_HOSTNAME = process.env.REDIS_HOSTNAME;
 
